@@ -15,7 +15,7 @@ export const Background = styled.div`
     align-items: center;
 `;
 
-export const Rectangle = styled.div`
+export const GameControllerBox = styled.div`
     width: 592px;
     height: 500px;
     background: linear-gradient(180deg, ${COLORS.BLUE.shade3}, ${COLORS.BLUE.shade4});
@@ -27,7 +27,7 @@ export const Rectangle = styled.div`
     position: relative;
 `;
 
-export const Logo = styled.div`
+export const GameLogo = styled.div`
     width: 374px;
     height: 185px;
     background: url(${logo});
@@ -37,7 +37,7 @@ export const Logo = styled.div`
     transform: translateX(-50%);
 `;
 
-export const Circle = styled.div`
+export const PlayButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,18 +1,18 @@
 import React from "react";
-import { Background, Circle, HowToPlayButton, HowToPlayButtonText, Logo, PlayIcon, Rectangle } from "./LandingPage.style";
+import { Background, GameControllerBox, GameLogo, HowToPlayButton, PlayButtonWrapper, PlayIcon } from "./LandingPage.style";
 
 const LandingPage = () => {
     return (
         <Background>
-            <Rectangle>
-                <Logo />
-                <Circle>
+            <GameControllerBox>
+                <GameLogo />
+                <PlayButtonWrapper>
                     <PlayIcon />
-                </Circle>
+                </PlayButtonWrapper>
                 <HowToPlayButton>
                     How to play
                 </HowToPlayButton>
-            </Rectangle>
+            </GameControllerBox>
         </Background>
     );
 }
