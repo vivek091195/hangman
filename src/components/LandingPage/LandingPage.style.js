@@ -1,19 +1,7 @@
 import styled from "styled-components";
-import background from "../../assets/background-desktop.svg";
 import logo from "../../assets/logo.svg";
 import playIcon from "../../assets/icon-play.svg";
 import { COLORS, TYPOGRAPHY } from "../../styles";
-
-export const Background = styled.div`
-    height: 100vh;
-    background-image: url(${background});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
 
 export const GameControllerBox = styled.div`
     width: 592px;
@@ -51,12 +39,13 @@ export const PlayButtonWrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-`;
-
-export const PlayIcon = styled.div`
-    width: 66px;
-    height: 62px;
-    background-image: url(${playIcon});
+    &:after {
+        content: "";
+        position: absolute;
+        width: 66px;
+        height: 62px;
+        background-image: url(${playIcon});
+    }
 `;
 
 export const HowToPlayButton = styled.div`

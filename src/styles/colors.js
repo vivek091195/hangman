@@ -7,7 +7,9 @@ export const COLORS = {
         shade5: "#140e66",
         shade6: "#7199ff",
         shade7: "#243041",
-        shade8: "#3c74ff"
+        shade8: "#3c74ff",
+        shade9: "#67b6ff",
+        shade10: "#887dc0"
     },
     PINK: {
         shade1: "#fe71fe",
