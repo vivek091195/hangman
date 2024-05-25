@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppContext } from "../../hooks/AppHook";
-import { Background, GameControllerBox, GameLogo, HowToPlayButton, PlayButtonWrapper, PlayIcon } from "./LandingPage.style";
+import { GameControllerBox, GameLogo, HowToPlayButton, PlayButtonWrapper } from "./LandingPage.style";
 
 const LandingPage = () => {
     const { howItWorksClickHandler, playClickHandler } = useAppContext();
