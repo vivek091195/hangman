@@ -35,7 +35,7 @@ export const Card = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 0 0 6px ${COLORS.BLUE.shade8}, 0 1px 0 8px ${COLORS.BLUE.shade5};
+    box-shadow: 0 0 0 5px ${COLORS.BLUE.shade8}, 0 1px 0 8px ${COLORS.BLUE.shade5};
 `;
 
 export const CardTitle = styled.div`

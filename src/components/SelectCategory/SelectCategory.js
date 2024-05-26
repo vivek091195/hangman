@@ -2,17 +2,19 @@ import React from "react";
 import { Card, CardContainer, CardTitle, Cards, Wrapper } from "./SelectCategory.style";
 import { PageTitle } from "../PageTitle/PageTitle";
 import { CATEGORIES } from "../../constants";
+import { useAppContext } from "../../hooks/AppHook";
 
 const SelectCategory = () => {
+    const { categoryClickHandler } = useAppContext();
     return (
         <Wrapper>
             <PageTitle title={"Pick a Category"} />
             <CardContainer>
                 <Cards>
                     {
-                        Object.values(CATEGORIES).map(value => (
-                            <Card>
-                                <CardTitle>{value}</CardTitle>
+                        CATEGORIES.map(({ id, title }) => (
+                            <Card key={id} onClick={() => categoryClickHandler(title)}>
+                                <CardTitle>{title}</CardTitle>
                             </Card>
                         ))
                     }

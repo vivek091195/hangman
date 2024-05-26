@@ -1,11 +1,29 @@
-export const CATEGORIES = {
-    MOVIES: "movies",
-    TV_SHOWS: "tv shows",
-    COUNTRIES: "countries",
-    CAPITAL_CITIES: "capital cities",
-    ANIMALS: "animals",
-    SPORTS: "sports"
-}
+export const CATEGORIES = [
+    {
+        id: "movies",
+        title: "Movies"
+    },
+    {
+        id: "tv_shows",
+        title: "TV Shows"
+    },
+    {
+        id: "countries",
+        title: "Countries"
+    },
+    {
+        id: "capital_cities",
+        title: "Capital Cities"
+    },
+    {
+        id: "animals",
+        title: "Animals"
+    },
+    {
+        id: "sports",
+        title: "Sports"
+    }
+]
 
 export const INSTRUCTIONS_CARDS = [
     {

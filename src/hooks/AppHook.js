@@ -12,6 +12,10 @@ const useApp = () => {
         navigate("/select-category");
     }
 
+    const categoryClickHandler = (category) => {
+        navigate(`/select-category/${category}`);
+    }
+
     const backClickHandler = () => {
         navigate(-1);
     }
@@ -19,6 +23,7 @@ const useApp = () => {
     return {
         howItWorksClickHandler,
         playClickHandler,
+        categoryClickHandler,
         backClickHandler
     }
 }
