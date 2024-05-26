@@ -13,7 +13,7 @@ const SelectCategory = () => {
                 <Cards>
                     {
                         CATEGORIES.map(({ id, title }) => (
-                            <Card key={id} onClick={() => categoryClickHandler(title)}>
+                            <Card key={id} onClick={() => categoryClickHandler(id)}>
                                 <CardTitle>{title}</CardTitle>
                             </Card>
                         ))

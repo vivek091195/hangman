@@ -1,26 +1,26 @@
 export const CATEGORIES = [
     {
-        id: "movies",
+        id: "Movies",
         title: "Movies"
     },
     {
-        id: "tv_shows",
+        id: "Tv_shows",
         title: "TV Shows"
     },
     {
-        id: "countries",
+        id: "Countries",
         title: "Countries"
     },
     {
-        id: "capital_cities",
+        id: "Capital_cities",
         title: "Capital Cities"
     },
     {
-        id: "animals",
+        id: "Animals",
         title: "Animals"
     },
     {
-        id: "sports",
+        id: "Sports",
         title: "Sports"
     }
 ]

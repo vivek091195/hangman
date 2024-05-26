@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import menu from "../../assets/icon-menu.svg";
 import heart from "../../assets/icon-heart.svg";
 import { COLORS, TYPOGRAPHY } from "../../styles";
@@ -6,10 +6,10 @@ import { COLORS, TYPOGRAPHY } from "../../styles";
 export const Wrapper = styled.div`
     width: 100%;
     height: 100vh;
+    padding: 80px 100px;
 `;
 
 export const Header = styled.div`
-    padding: 60px 80px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -58,3 +58,39 @@ export const Title = styled.div`
 `;
 
 export const RightSection = styled.div``;
+
+export const Content = styled.div`
+    height: 100%;
+    width: 100%;
+`;
+
+export const GuessWindow = styled.div`
+    height: 40%;
+`;
+
+export const Keyboard = styled.div`
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 20px;
+    justify-items: center;
+`;
+
+export const Key = styled.div`
+    width: ${props => props.width || "109px"};
+    height: ${props => props.width || "84px"};
+    background: ${props => props.backgroundColor || COLORS.WHITE.shade1};
+    border-radius: ${props => props.borderRadius || "24px"};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: ${props => props.fontSize || TYPOGRAPHY.m};
+    color: ${props => props.color || COLORS.BLUE.shade1};
+    cursor: pointer;
+    ${(props) =>
+        props.additionalStyles &&
+        css`
+            box-shadow: 0 -3px 0 4px ${COLORS.BLUE.shade8}, 0 0 0 6px ${COLORS.BLUE.shade5};
+        `}
+`;

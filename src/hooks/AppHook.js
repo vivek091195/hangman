@@ -1,5 +1,6 @@
 import constate from "constate";
 import { useNavigate } from "react-router-dom";
+import { Category } from "../data/index";
 
 const useApp = () => {
     const navigate = useNavigate();
@@ -20,11 +21,19 @@ const useApp = () => {
         navigate(-1);
     }
 
+    const randomCategoryPickerHandler = (category) => {
+        const categories = Category();
+        const categoryArray = categories[category];
+
+        return categoryArray[Math.floor(Math.random() * categoryArray.length)];
+    }
+
     return {
         howItWorksClickHandler,
         playClickHandler,
         categoryClickHandler,
-        backClickHandler
+        backClickHandler,
+        randomCategoryPickerHandler
     }
 }
 
