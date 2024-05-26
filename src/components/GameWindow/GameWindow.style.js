@@ -6,7 +6,7 @@ import { COLORS, TYPOGRAPHY } from '../../styles';
 export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 80px 100px;
+  padding: 40px 80px;
 `;
 
 export const Header = styled.div`
@@ -63,20 +63,24 @@ export const Title = styled.div`
 export const RightSection = styled.div``;
 
 export const Content = styled.div`
-  height: 100%;
+  height: 90%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 export const GuessWindow = styled.div`
-  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Keyboard = styled.div`
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto;
-  column-gap: 10px;
-  row-gap: 20px;
   justify-items: center;
 `;
 
@@ -85,12 +89,17 @@ export const Key = styled.div`
   height: ${(props) => props.width || '84px'};
   background: ${(props) => props.backgroundColor || COLORS.WHITE.shade1};
   border-radius: ${(props) => props.borderRadius || '24px'};
-  display: flex;
+  display: ${(props) => (props.hide ? 'none' : 'flex')};
   justify-content: center;
   align-items: center;
+  visibility: ${(props) => (props.invisible ? 'hidden' : 'unset')};
   font-size: ${(props) => props.fontSize || TYPOGRAPHY.m};
   color: ${(props) => props.color || COLORS.BLUE.shade1};
+  opacity: ${(props) => (props.used ? 0.25 : 1)};
   cursor: pointer;
+  margin-left: 30px;
+  margin-top: 30px;
+  text-transform: uppercase;
   ${(props) =>
     props.additionalStyles &&
     css`
