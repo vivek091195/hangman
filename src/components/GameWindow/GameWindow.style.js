@@ -95,7 +95,6 @@ export const Key = styled.div`
   visibility: ${(props) => (props.invisible ? 'hidden' : 'unset')};
   font-size: ${(props) => props.fontSize || TYPOGRAPHY.m};
   color: ${(props) => props.color || COLORS.BLUE.shade1};
-  opacity: ${(props) => (props.used ? 0.25 : 1)};
   cursor: pointer;
   margin-left: 30px;
   margin-top: 30px;
@@ -106,4 +105,13 @@ export const Key = styled.div`
       box-shadow: 0 -3px 0 4px ${COLORS.BLUE.shade8},
         0 0 0 6px ${COLORS.BLUE.shade5};
     `}
+  ${(props) =>
+    props.disabled &&
+    css`
+      opacity: 0.4;
+      * {
+        pointer-events: none;
+        cursor: none;
+      }
+    `};
 `;

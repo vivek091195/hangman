@@ -28,11 +28,20 @@ const useApp = () => {
     return categoryArray[Math.floor(Math.random() * categoryArray.length)];
   };
 
+  const generateRandomNumbers = (min, max, count) => {
+    let numbers = new Set();
+    for (let i = 0; i < count; i++) {
+      numbers.add(min + Math.floor(Math.random() * max));
+    }
+    return Array.from(numbers).sort((a, b) => a - b);
+  };
+
   return {
     howItWorksClickHandler,
     playClickHandler,
     categoryClickHandler,
     backClickHandler,
+    generateRandomNumbers,
     randomCategoryPickerHandler
   };
 };
